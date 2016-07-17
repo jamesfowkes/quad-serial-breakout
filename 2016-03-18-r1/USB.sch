@@ -1,0 +1,248 @@
+EESchema Schematic File Version 2
+LIBS:quad-serial-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:FTDI
+LIBS:esd_protection
+LIBS:usb-connectors
+LIBS:quad-serial-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L C-RESCUE-quad-serial C14
+U 1 1 56DC42B3
+P 6300 4150
+F 0 "C14" H 6300 4250 40  0000 L CNN
+F 1 "4n7" H 6306 4065 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6338 4000 30  0001 C CNN
+F 3 "" H 6300 4150 60  0000 C CNN
+	1    6300 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-quad-serial R3
+U 1 1 56DC4372
+P 6700 4150
+F 0 "R3" V 6780 4150 40  0000 C CNN
+F 1 "1M" V 6707 4151 40  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6630 4150 30  0001 C CNN
+F 3 "" H 6700 4150 30  0000 C CNN
+	1    6700 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR037
+U 1 1 56DC4417
+P 6300 4600
+F 0 "#PWR037" H 6300 4600 30  0001 C CNN
+F 1 "GND" H 6300 4530 30  0001 C CNN
+F 2 "" H 6300 4600 60  0000 C CNN
+F 3 "" H 6300 4600 60  0000 C CNN
+	1    6300 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3900 6700 3800
+Wire Wire Line
+	6300 3800 6800 3800
+Wire Wire Line
+	6300 4350 6300 4600
+Wire Wire Line
+	6300 4500 6700 4500
+Wire Wire Line
+	6700 4500 6700 4400
+Connection ~ 6300 4500
+$Comp
+L PRTR5V0U2X U3
+U 1 1 56DC4A25
+P 5500 2850
+F 0 "U3" H 5500 2650 60  0000 C CNN
+F 1 "PRTR5V0U2X" H 5500 3100 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-143" H 5500 2750 60  0001 C CNN
+F 3 "" H 5500 2750 60  0000 C CNN
+	1    5500 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3200 6700 3200
+Wire Wire Line
+	5900 2900 6000 2900
+Wire Wire Line
+	6000 2900 6000 3200
+Connection ~ 6000 3200
+Wire Wire Line
+	5100 2900 5000 2900
+Wire Wire Line
+	5900 2800 6000 2800
+Text HLabel 4700 3100 0    60   BiDi ~ 0
+DM
+Text HLabel 4700 3200 0    60   BiDi ~ 0
+DP
+Connection ~ 6700 3800
+Text HLabel 6800 3800 2    60   UnSpc ~ 0
+SHIELD
+$Comp
+L PWR_FLAG #FLG038
+U 1 1 56DE7129
+P 5800 2150
+F 0 "#FLG038" H 5800 2245 30  0001 C CNN
+F 1 "PWR_FLAG" H 5800 2330 30  0000 C CNN
+F 2 "" H 5800 2150 60  0000 C CNN
+F 3 "" H 5800 2150 60  0000 C CNN
+	1    5800 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG039
+U 1 1 56DE7161
+P 5800 3500
+F 0 "#FLG039" H 5800 3595 30  0001 C CNN
+F 1 "PWR_FLAG" H 5800 3680 30  0000 C CNN
+F 2 "" H 5800 3500 60  0000 C CNN
+F 3 "" H 5800 3500 60  0000 C CNN
+	1    5800 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5600 3400 6700 3400
+Wire Wire Line
+	5800 3400 5800 3500
+Connection ~ 5800 3400
+$Comp
+L USB-MINI-B-SMD J1
+U 1 1 56E83BE8
+P 7350 3250
+F 0 "J1" H 7050 3650 60  0000 C CNN
+F 1 "USB-MINI-B-SMD" H 7200 2850 60  0000 C CNN
+F 2 "usb-connectors:USB-MINI-B-SMD" H 7350 3250 60  0001 C CNN
+F 3 "" H 7350 3250 60  0000 C CNN
+	1    7350 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3100 6700 3100
+Connection ~ 5000 3100
+Wire Wire Line
+	5000 2900 5000 3100
+Wire Wire Line
+	6300 3500 6300 3950
+Wire Wire Line
+	6700 3500 6300 3500
+Connection ~ 6300 3800
+NoConn ~ 6700 3300
+$Comp
+L GND #PWR040
+U 1 1 56DC54CC
+P 5600 3500
+F 0 "#PWR040" H 5600 3500 30  0001 C CNN
+F 1 "GND" H 5600 3430 30  0001 C CNN
+F 2 "" H 5600 3500 60  0000 C CNN
+F 3 "" H 5600 3500 60  0000 C CNN
+	1    5600 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3400 5600 3500
+$Comp
+L INDUCTOR L3
+U 1 1 56E845CD
+P 6200 2250
+F 0 "L3" V 6150 2250 40  0000 C CNN
+F 1 "220R@100MHz" V 6300 2250 40  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 6200 2250 60  0001 C CNN
+F 3 "" H 6200 2250 60  0000 C CNN
+	1    6200 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 3000 6600 3000
+Wire Wire Line
+	6600 3000 6600 2250
+Wire Wire Line
+	6600 2250 6500 2250
+Wire Wire Line
+	5800 2250 5800 2150
+Connection ~ 5800 2250
+Wire Wire Line
+	5500 2250 5900 2250
+Wire Wire Line
+	5500 2250 5500 2100
+$Comp
+L +5V #PWR041
+U 1 1 56E84A59
+P 5500 2100
+F 0 "#PWR041" H 5500 2190 20  0001 C CNN
+F 1 "+5V" H 5500 2190 30  0000 C CNN
+F 2 "" H 5500 2100 60  0000 C CNN
+F 3 "" H 5500 2100 60  0000 C CNN
+	1    5500 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR042
+U 1 1 56E84A77
+P 6000 2700
+F 0 "#PWR042" H 6000 2790 20  0001 C CNN
+F 1 "+5V" H 6000 2790 30  0000 C CNN
+F 2 "" H 6000 2700 60  0000 C CNN
+F 3 "" H 6000 2700 60  0000 C CNN
+	1    6000 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2800 6000 2700
+Wire Wire Line
+	5100 2800 4900 2800
+Wire Wire Line
+	4900 2800 4900 3400
+$Comp
+L GND #PWR043
+U 1 1 56E8919A
+P 4900 3400
+F 0 "#PWR043" H 4900 3400 30  0001 C CNN
+F 1 "GND" H 4900 3330 30  0001 C CNN
+F 2 "" H 4900 3400 60  0000 C CNN
+F 3 "" H 4900 3400 60  0000 C CNN
+	1    4900 3400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

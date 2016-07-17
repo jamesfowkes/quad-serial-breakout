@@ -1,0 +1,181 @@
+EESchema Schematic File Version 2
+LIBS:quad-serial-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:FTDI
+LIBS:esd_protection
+LIBS:usb-connectors
+LIBS:quad-serial-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NCP1117ST33T3G U2
+U 1 1 56B49816
+P 5850 3750
+F 0 "U2" H 5850 4000 40  0000 C CNN
+F 1 "NCP1117ST33T3G" H 5850 3950 40  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 5850 3750 60  0001 C CNN
+F 3 "" H 5850 3750 60  0000 C CNN
+	1    5850 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR031
+U 1 1 56B4981D
+P 6350 3600
+F 0 "#PWR031" H 6350 3560 30  0001 C CNN
+F 1 "+3.3V" H 6350 3710 30  0000 C CNN
+F 2 "" H 6350 3600 60  0000 C CNN
+F 3 "" H 6350 3600 60  0000 C CNN
+	1    6350 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3700 6350 3700
+Wire Wire Line
+	6350 3600 6350 3800
+$Comp
+L GND #PWR032
+U 1 1 56B49825
+P 5850 4300
+F 0 "#PWR032" H 5850 4300 30  0001 C CNN
+F 1 "GND" H 5850 4230 30  0001 C CNN
+F 2 "" H 5850 4300 60  0000 C CNN
+F 3 "" H 5850 4300 60  0000 C CNN
+	1    5850 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4300 5850 4000
+$Comp
+L +5V #PWR033
+U 1 1 56B4982C
+P 5100 3600
+F 0 "#PWR033" H 5100 3690 20  0001 C CNN
+F 1 "+5V" H 5100 3690 30  0000 C CNN
+F 2 "" H 5100 3600 60  0000 C CNN
+F 3 "" H 5100 3600 60  0000 C CNN
+	1    5100 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3700 5450 3700
+Wire Wire Line
+	5100 3600 5100 3800
+$Comp
+L C-RESCUE-quad-serial C15
+U 1 1 56B49834
+P 5100 4000
+F 0 "C15" H 5100 4100 40  0000 L CNN
+F 1 "100n" H 5106 3915 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5138 3850 30  0001 C CNN
+F 3 "" H 5100 4000 60  0000 C CNN
+	1    5100 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-quad-serial C16
+U 1 1 56B4983B
+P 6350 4000
+F 0 "C16" H 6350 4100 40  0000 L CNN
+F 1 "100n" H 6356 3915 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6388 3850 30  0001 C CNN
+F 3 "" H 6350 4000 60  0000 C CNN
+	1    6350 4000
+	1    0    0    -1  
+$EndComp
+Connection ~ 5100 3700
+Connection ~ 6350 3700
+Wire Wire Line
+	6350 4300 6350 4200
+Wire Wire Line
+	5100 4300 5100 4200
+$Comp
+L GND #PWR034
+U 1 1 56B49846
+P 6350 4300
+F 0 "#PWR034" H 6350 4300 30  0001 C CNN
+F 1 "GND" H 6350 4230 30  0001 C CNN
+F 2 "" H 6350 4300 60  0000 C CNN
+F 3 "" H 6350 4300 60  0000 C CNN
+	1    6350 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR035
+U 1 1 56B4984C
+P 5100 4300
+F 0 "#PWR035" H 5100 4300 30  0001 C CNN
+F 1 "GND" H 5100 4230 30  0001 C CNN
+F 2 "" H 5100 4300 60  0000 C CNN
+F 3 "" H 5100 4300 60  0000 C CNN
+	1    5100 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-quad-serial C18
+U 1 1 56E95067
+P 5350 4000
+F 0 "C18" H 5350 4100 40  0000 L CNN
+F 1 "10u" H 5356 3915 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5388 3850 30  0001 C CNN
+F 3 "" H 5350 4000 60  0000 C CNN
+	1    5350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3800 5350 3700
+Connection ~ 5350 3700
+Wire Wire Line
+	5350 4300 5350 4200
+$Comp
+L GND #PWR036
+U 1 1 56E950E6
+P 5350 4300
+F 0 "#PWR036" H 5350 4300 30  0001 C CNN
+F 1 "GND" H 5350 4230 30  0001 C CNN
+F 2 "" H 5350 4300 60  0000 C CNN
+F 3 "" H 5350 4300 60  0000 C CNN
+	1    5350 4300
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
